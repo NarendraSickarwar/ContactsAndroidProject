@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Narendra Singh",
+    "dial_code": "+91",
+    "code": "IN",
+    "mobile": "8890093330"
+  },
+  {
+    "name": "Kishan Network",
+    "dial_code": "+919810153260",
+    "code": "IN",
+    "mobile": "8890093330"
+  },
+  {
+    "name": "Ram",
+    "dial_code": "+355",
+    "code": "AL",
+    "mobile": "45456454"
+  },
+  {
+    "name": "Algeria",
+    "dial_code": "+213",
+    "code": "DZ",
+    "mobile": "78797899888"
+  },
+  {
+    "name": "AmericanSamoa",
+    "dial_code": "+1684",
+    "code": "AS",
+    "mobile": "5454564545478"
+  },
+  {
+    "name": "AmericanSamoa",
+    "dial_code": "+1684",
+    "code": "AS",
+    "mobile": "5454564545478"
+  },
+  {
+    "name": "AmericanSamoa",
+    "dial_code": "+1684",
+    "code": "AS",
+    "mobile": "5454564545478"
+  },
+  {
+    "name": "AmericanSamoa",
+    "dial_code": "+1684",
+    "code": "AS",
+    "mobile": "5454564545478"
+  },
+  {
+    "name": "AmericanSamoa",
+    "dial_code": "+1684",
+    "code": "AS",
+    "mobile": "5454564545478"
+  }
+]

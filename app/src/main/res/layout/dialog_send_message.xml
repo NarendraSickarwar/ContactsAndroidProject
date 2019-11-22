@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~  Copyright (C) 2017 MINDORKS NEXTGEN PRIVATE LIMITED
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~      https://mindorks.com/license/apache-v2
+  ~
+  ~  Unless required by applicable law or agreed to in writing, software
+  ~  distributed under the License is distributed on an "AS IS" BASIS,
+  ~  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  See the License for the specific language governing permissions and
+  ~  limitations under the License
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.app.contactsandroidproject.ui.main.sendmessage.SendMessageViewItemSendDialog" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="30dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="30dp">
+
+                    <TextView
+                        style="@style/TextStyle.Heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/detail" />
+
+                    <TextView
+                        android:id="@+id/txt_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/thumbnail_margin"
+                        android:layout_toRightOf="@+id/thumbnail"
+                        android:paddingLeft="@dimen/contact_name_padding"
+                        android:paddingTop="@dimen/contact_name_padding"
+                        android:paddingRight="@dimen/contact_name_padding"
+                        android:text="@{viewModel.name}"
+                        android:textColor="@color/contact_name"
+                        android:textSize="@dimen/contact_name"
+                        tools:text="Narendra singh" />
+
+                    <TextView
+                        android:id="@+id/txt_phoneno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_name"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/thumbnail_margin"
+                        android:layout_toRightOf="@+id/thumbnail"
+                        android:paddingLeft="@dimen/contact_name_padding"
+                        android:paddingRight="@dimen/contact_name_padding"
+                        android:paddingBottom="@dimen/contact_name_padding"
+                        android:text="@{viewModel.mobile}"
+                        tools:text="4654545645646" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/footer_button_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+
+                        <Button
+                            android:id="@+id/btnLater"
+                            style="@style/Button.Action.Negative"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:onClick="@{() -> viewModel.onLaterClick()}"
+                            android:text="@string/later" />
+
+                        <Button
+                            android:id="@+id/btnSubmit"
+                            style="@style/Button.Action.Positive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:onClick="@{() -> viewModel.onSubmitClick()}"
+                            android:text="@string/send_message" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_messagesend"
+                        style="@style/TextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/thumbnail_cover_height"
+                        android:layout_below="@+id/footer_button_layout"
+                        android:layout_margin="@dimen/item_layout_padding"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="@dimen/contact_name_padding"
+
+                        android:text="@{viewModel.randomnotxt}"
+                        android:visibility="gone" />
+
+                    <Button
+
+                        android:id="@+id/btn_send_message"
+                        style="@style/Button.Action.Positive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{() -> viewModel.onSendMessageClick()}"
+
+                        android:text="@string/send_message"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</layout>

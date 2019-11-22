@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ContactsAndroidProject</string>
+    <string name="tab_text_1">Contacts</string>
+    <string name="tab_text_2">Message List</string>
+
+    <!--empty state-->
+    <string name="empty_screen">We do not have anything\nhere right now.</string>
+    <string name="please_retry">Please Retry</string>
+    <string name="retry">Retry</string>
+    <string name="title">Contacts</string>
+    <string name="detail">Details</string>
+    <string name="later">Later</string>
+    <string name="send_message">Send Message</string>
+    <string name="new_title">New</string>
+</resources>

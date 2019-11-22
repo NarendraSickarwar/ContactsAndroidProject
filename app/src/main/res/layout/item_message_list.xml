@@ -1,0 +1,111 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.app.contactsandroidproject.ui.main.messagelist.MessageItemViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/card_margin"
+            android:elevation="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/item_layout_padding">
+
+                <ImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="@dimen/thumbnail_cover_height"
+                    android:layout_height="@dimen/thumbnail_cover_height"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/thumbnail_margin"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    app:imageUrl="@{viewModel.imageUrl}"
+                    tools:src="@drawable/ic_rabbit" />
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/thumbnail_margin"
+                    android:layout_marginTop="@dimen/thumbnail_margin"
+                    android:layout_marginRight="@dimen/thumbnail_margin"
+                    android:layout_toRightOf="@+id/thumbnail"
+
+                    android:paddingLeft="@dimen/contact_name_padding"
+                    android:paddingTop="@dimen/contact_name_padding"
+                    android:paddingRight="@dimen/contact_name_padding"
+                    android:text="@{viewModel.name}"
+                    android:textColor="@color/contact_name"
+                    android:textSize="@dimen/contact_name"
+                    tools:text="Narendra singh" />
+
+                <TextView
+                    android:id="@+id/txt_phoneno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_name"
+
+                    android:layout_marginLeft="@dimen/thumbnail_margin"
+                    android:layout_marginRight="@dimen/thumbnail_margin"
+                    android:layout_toRightOf="@+id/thumbnail"
+                    android:paddingLeft="@dimen/contact_name_padding"
+                    android:paddingRight="@dimen/contact_name_padding"
+
+                    android:text="@{viewModel.mobile}"
+                    tools:text="4654545645646" />
+
+                <TextView
+                    android:id="@+id/txt_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_phoneno"
+
+
+                    android:layout_marginLeft="@dimen/thumbnail_margin"
+                    android:layout_marginRight="@dimen/thumbnail_margin"
+                    android:layout_toRightOf="@+id/thumbnail"
+                    android:paddingLeft="@dimen/contact_name_padding"
+                    android:paddingRight="@dimen/contact_name_padding"
+
+                    android:text="@{viewModel.otp}"
+                    tools:text="4654545645646" />
+
+                <TextView
+                    android:id="@+id/txt_createdat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_otp"
+
+
+                    android:layout_marginLeft="@dimen/thumbnail_margin"
+                    android:layout_marginRight="@dimen/thumbnail_margin"
+                    android:layout_toRightOf="@+id/thumbnail"
+                    android:paddingLeft="@dimen/contact_name_padding"
+                    android:paddingRight="@dimen/contact_name_padding"
+                    android:paddingBottom="@dimen/contact_name_padding"
+                    android:text="@{viewModel.CreatedAt}"
+                    tools:text="4654545645646" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>
